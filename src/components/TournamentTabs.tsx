@@ -3,14 +3,15 @@ import PracticalInfo from "./PracticalInfo";
 import TournamentSchedule from "./TournamentSchedule";
 import RegistrationForm from "./RegistrationForm";
 import RegisteredTeams from "./RegisteredTeams";
-import { Info, Calendar, ClipboardList, Users } from "lucide-react";
+import MatchSchedule from "./MatchSchedule";
+import { Info, Calendar, ClipboardList, Users, Trophy } from "lucide-react";
 
 const TournamentTabs = () => {
   return (
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-6">
         <Tabs defaultValue="registration" className="max-w-3xl mx-auto">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-5 mb-8">
             <TabsTrigger value="registration" className="flex items-center gap-2">
               <ClipboardList className="w-4 h-4" />
               <span className="hidden sm:inline">Inschrijven</span>
@@ -18,6 +19,10 @@ const TournamentTabs = () => {
             <TabsTrigger value="teams" className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span className="hidden sm:inline">Teams</span>
+            </TabsTrigger>
+            <TabsTrigger value="matches" className="flex items-center gap-2">
+              <Trophy className="w-4 h-4" />
+              <span className="hidden sm:inline">Wedstrijden</span>
             </TabsTrigger>
             <TabsTrigger value="info" className="flex items-center gap-2">
               <Info className="w-4 h-4" />
@@ -35,6 +40,10 @@ const TournamentTabs = () => {
           
           <TabsContent value="teams">
             <RegisteredTeams />
+          </TabsContent>
+          
+          <TabsContent value="matches">
+            <MatchSchedule />
           </TabsContent>
           
           <TabsContent value="info">
