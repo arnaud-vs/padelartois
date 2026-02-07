@@ -9,7 +9,7 @@ const TournamentHeader = () => {
           <img
             src={padelArtoisLogo}
             alt="Padel Artois"
-            className="h-44 md:h-60 lg:h-72 w-auto mb-4"
+            className="h-52 md:h-72 lg:h-80 w-auto mb-4"
           />
           
           {/* Tournament subtitle */}
