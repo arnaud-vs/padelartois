@@ -1,9 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PracticalInfo from "./PracticalInfo";
-import TournamentSchedule from "./TournamentSchedule";
 import RegistrationForm from "./RegistrationForm";
 import RegisteredTeams from "./RegisteredTeams";
-import MatchSchedule from "./MatchSchedule";
 import { Info, Calendar, ClipboardList, Users, Trophy, AlertTriangle } from "lucide-react";
 
 const TournamentTabs = () => {
@@ -51,17 +49,15 @@ const TournamentTabs = () => {
           </TabsContent>
           
           <TabsContent value="matches">
-            <div className="mb-4 p-3 bg-muted/50 border border-border rounded-lg text-center text-sm text-muted-foreground">
+            <div className="p-3 bg-muted/50 border border-border rounded-lg text-center text-sm text-muted-foreground">
               ⚠️ Dit schema is nog niet definitief en wordt later ingevuld.
             </div>
-            <MatchSchedule />
           </TabsContent>
           
           <TabsContent value="schedule">
-            <div className="mb-4 p-3 bg-muted/50 border border-border rounded-lg text-center text-sm text-muted-foreground">
+            <div className="p-3 bg-muted/50 border border-border rounded-lg text-center text-sm text-muted-foreground">
               ⚠️ Dit programma is nog niet definitief en kan nog wijzigen.
             </div>
-            <TournamentSchedule />
           </TabsContent>
           
           <TabsContent value="secret">
