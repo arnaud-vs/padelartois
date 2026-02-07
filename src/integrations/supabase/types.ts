@@ -20,6 +20,7 @@ export type Database = {
           id: string
           is_hyped: boolean
           join_drinks: boolean
+          needs_racket: boolean
           player1_name: string
           player2_name: string | null
           skill_level: number
@@ -31,6 +32,7 @@ export type Database = {
           id?: string
           is_hyped?: boolean
           join_drinks?: boolean
+          needs_racket?: boolean
           player1_name: string
           player2_name?: string | null
           skill_level?: number
@@ -42,6 +44,7 @@ export type Database = {
           id?: string
           is_hyped?: boolean
           join_drinks?: boolean
+          needs_racket?: boolean
           player1_name?: string
           player2_name?: string | null
           skill_level?: number
