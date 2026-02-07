@@ -23,7 +23,7 @@ const TournamentFooter = () => {
             <Star className="w-3 h-3 text-accent fill-accent" />
           </div>
           <p className="text-primary-foreground/50 text-sm">
-            © 2026 - Dat de beste moge winnen!
+            Wow, you're actually reading this
           </p>
         </div>
       </div>
