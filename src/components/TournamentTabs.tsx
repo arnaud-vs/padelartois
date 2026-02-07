@@ -4,14 +4,14 @@ import TournamentSchedule from "./TournamentSchedule";
 import RegistrationForm from "./RegistrationForm";
 import RegisteredTeams from "./RegisteredTeams";
 import MatchSchedule from "./MatchSchedule";
-import { Info, Calendar, ClipboardList, Users, Trophy } from "lucide-react";
+import { Info, Calendar, ClipboardList, Users, Trophy, AlertTriangle } from "lucide-react";
 
 const TournamentTabs = () => {
   return (
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-6">
         <Tabs defaultValue="registration" className="max-w-3xl mx-auto">
-          <TabsList className="grid w-full grid-cols-5 mb-8">
+          <TabsList className="grid w-full grid-cols-6 mb-8">
             <TabsTrigger value="registration" className="flex items-center gap-2">
               <ClipboardList className="w-4 h-4" />
               <span className="hidden sm:inline">Inschrijven</span>
@@ -31,6 +31,10 @@ const TournamentTabs = () => {
             <TabsTrigger value="schedule" className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               <span className="hidden sm:inline">Programma</span>
+            </TabsTrigger>
+            <TabsTrigger value="secret" className="flex items-center gap-2 text-destructive">
+              <AlertTriangle className="w-4 h-4" />
+              <span className="hidden sm:inline">Don't click</span>
             </TabsTrigger>
           </TabsList>
           
@@ -58,6 +62,24 @@ const TournamentTabs = () => {
               ⚠️ Dit programma is nog niet definitief en kan nog wijzigen.
             </div>
             <TournamentSchedule />
+          </TabsContent>
+          
+          <TabsContent value="secret">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold mb-4">🎵 You've been warned... 🎵</h2>
+              <div className="aspect-video max-w-2xl mx-auto rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                  title="Never Gonna Give You Up"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <p className="mt-4 text-muted-foreground">Never gonna give you up, never gonna let you down... 🕺</p>
+            </div>
           </TabsContent>
         </Tabs>
       </div>
