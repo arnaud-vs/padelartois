@@ -17,7 +17,7 @@ const TournamentDescription = () => {
             padelduo's het tegen elkaar opnemen voor de felbegeerde eerste plaats, met bijbehorende prijzen. 
             Na de ongetwijfeld bloedstollende finale zakken we gezamenlijk af naar{" "}
             <span className="font-semibold text-primary">Den Tros</span> voor een welverdiend pintje on the house. 
-            Alle andere praktische info kan je hier vinden. 
+            Alle andere praktische info kan je hieronder vinden. 
           </p>
           
           <p className="text-xl md:text-2xl font-display text-primary mt-8 italic">
