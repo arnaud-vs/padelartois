@@ -20,6 +20,7 @@ const RegistrationForm = () => {
     teamName: "",
     teamColor: "",
     skillLevel: [50],
+    needsRacket: false,
     joinDrinks: false,
     isHyped: false,
   });
@@ -45,6 +46,7 @@ const RegistrationForm = () => {
         team_name: formData.teamName.trim() || null,
         team_color: formData.teamColor.trim() || null,
         skill_level: formData.skillLevel[0],
+        needs_racket: formData.needsRacket,
         join_drinks: formData.joinDrinks,
         is_hyped: formData.isHyped,
       });
@@ -170,6 +172,18 @@ const RegistrationForm = () => {
 
           {/* Checkboxes */}
           <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <Checkbox
+                id="needsRacket"
+                checked={formData.needsRacket}
+                onCheckedChange={(checked) => 
+                  setFormData({ ...formData, needsRacket: checked as boolean })
+                }
+              />
+              <Label htmlFor="needsRacket" className="cursor-pointer">
+                I need a padel racket 🎾
+              </Label>
+            </div>
             <div className="flex items-center space-x-3">
               <Checkbox
                 id="joinDrinks"
