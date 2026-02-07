@@ -20,13 +20,13 @@ const TournamentTabs = () => {
               <Users className="w-4 h-4" />
               <span className="hidden sm:inline">Teams</span>
             </TabsTrigger>
-            <TabsTrigger value="matches" className="flex items-center gap-2">
-              <Trophy className="w-4 h-4" />
-              <span className="hidden sm:inline">Wedstrijden</span>
-            </TabsTrigger>
             <TabsTrigger value="info" className="flex items-center gap-2">
               <Info className="w-4 h-4" />
               <span className="hidden sm:inline">Praktisch</span>
+            </TabsTrigger>
+            <TabsTrigger value="matches" className="flex items-center gap-2">
+              <Trophy className="w-4 h-4" />
+              <span className="hidden sm:inline">Wedstrijden</span>
             </TabsTrigger>
             <TabsTrigger value="schedule" className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -42,15 +42,21 @@ const TournamentTabs = () => {
             <RegisteredTeams />
           </TabsContent>
           
-          <TabsContent value="matches">
-            <MatchSchedule />
-          </TabsContent>
-          
           <TabsContent value="info">
             <PracticalInfo />
           </TabsContent>
           
+          <TabsContent value="matches">
+            <div className="mb-4 p-3 bg-muted/50 border border-border rounded-lg text-center text-sm text-muted-foreground">
+              ⚠️ Dit schema is nog niet definitief en wordt later ingevuld.
+            </div>
+            <MatchSchedule />
+          </TabsContent>
+          
           <TabsContent value="schedule">
+            <div className="mb-4 p-3 bg-muted/50 border border-border rounded-lg text-center text-sm text-muted-foreground">
+              ⚠️ Dit programma is nog niet definitief en kan nog wijzigen.
+            </div>
             <TournamentSchedule />
           </TabsContent>
         </Tabs>
