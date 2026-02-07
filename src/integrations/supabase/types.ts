@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      registrations: {
+        Row: {
+          created_at: string
+          id: string
+          is_hyped: boolean
+          join_drinks: boolean
+          player1_name: string
+          player2_name: string | null
+          skill_level: number
+          team_color: string | null
+          team_name: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_hyped?: boolean
+          join_drinks?: boolean
+          player1_name: string
+          player2_name?: string | null
+          skill_level?: number
+          team_color?: string | null
+          team_name?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_hyped?: boolean
+          join_drinks?: boolean
+          player1_name?: string
+          player2_name?: string | null
+          skill_level?: number
+          team_color?: string | null
+          team_name?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

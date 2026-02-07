@@ -39,16 +39,14 @@ const RegistrationForm = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke("send-registration", {
-        body: {
-          player1Name: formData.player1Name.trim(),
-          player2Name: formData.player2Name.trim(),
-          teamName: formData.teamName.trim(),
-          teamColor: formData.teamColor.trim(),
-          skillLevel: formData.skillLevel[0],
-          joinDrinks: formData.joinDrinks,
-          isHyped: formData.isHyped,
-        },
+      const { error } = await supabase.from("registrations").insert({
+        player1_name: formData.player1Name.trim(),
+        player2_name: formData.player2Name.trim() || null,
+        team_name: formData.teamName.trim() || null,
+        team_color: formData.teamColor.trim() || null,
+        skill_level: formData.skillLevel[0],
+        join_drinks: formData.joinDrinks,
+        is_hyped: formData.isHyped,
       });
 
       if (error) throw error;
