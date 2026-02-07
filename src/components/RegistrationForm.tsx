@@ -120,6 +120,9 @@ const RegistrationForm = () => {
               value={formData.player2Name}
               onChange={(e) => setFormData({ ...formData, player2Name: e.target.value })}
             />
+            <p className="text-sm text-muted-foreground">
+              Als ge geen partner hebt, dan zal ik u met een andere speler matchen!
+            </p>
           </div>
 
           {/* Team Name - Optional */}
