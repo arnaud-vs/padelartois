@@ -1,21 +1,17 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Pricing from "@/components/Pricing";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
+import TournamentHeader from "@/components/TournamentHeader";
+import TournamentDescription from "@/components/TournamentDescription";
+import TournamentTabs from "@/components/TournamentTabs";
+import TournamentFooter from "@/components/TournamentFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-        <Pricing />
-        <CTA />
+    <div className="min-h-screen flex flex-col">
+      <TournamentHeader />
+      <main className="flex-1">
+        <TournamentDescription />
+        <TournamentTabs />
       </main>
-      <Footer />
+      <TournamentFooter />
     </div>
   );
 };

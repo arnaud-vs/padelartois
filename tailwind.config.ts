@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["var(--font-display)", "sans-serif"],
+        display: ["var(--font-display)", "serif"],
         body: ["var(--font-body)", "sans-serif"],
       },
       colors: {
@@ -50,6 +50,11 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        stella: {
+          red: "hsl(var(--stella-red))",
+          gold: "hsl(var(--stella-gold))",
+          cream: "hsl(var(--stella-cream))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
