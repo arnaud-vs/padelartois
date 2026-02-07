@@ -1,5 +1,5 @@
 import padelArtoisLogo from "@/assets/padel-artois-header-logo.png";
-import padelGoldenHour from "@/assets/padel-golden-hour.jpg";
+import padelBlueSky from "@/assets/padel-blue-sky.jpg";
 
 const TournamentHeader = () => {
   return (
@@ -7,11 +7,11 @@ const TournamentHeader = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={padelGoldenHour}
-          alt="Padel court at golden hour"
+          src={padelBlueSky}
+          alt="Padel court with blue sky"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
       </div>
       
       <div className="relative z-10 container mx-auto px-6">
