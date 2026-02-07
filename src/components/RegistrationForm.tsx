@@ -127,7 +127,7 @@ const RegistrationForm = () => {
             <Label htmlFor="teamName">Team Naam (optioneel)</Label>
             <Input
               id="teamName"
-              placeholder="Bijv. De Smashmasters"
+              placeholder="Bijv. De Cowboys"
               value={formData.teamName}
               onChange={(e) => setFormData({ ...formData, teamName: e.target.value })}
             />
