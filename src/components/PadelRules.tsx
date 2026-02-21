@@ -11,41 +11,65 @@ const RuleSection = ({ title, icon, children }: { title: string; icon: string; c
 );
 
 const CourtDiagram = () => (
-  <div className="bg-green-800/90 rounded-lg p-4 max-w-sm mx-auto my-6 text-white text-xs font-mono select-none">
-    <div className="border-2 border-white/80 rounded relative">
-      {/* Net */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/60 -translate-x-1/2" />
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-800 px-1 text-white/80 text-[10px]">NET</div>
+  <div className="bg-green-800/90 rounded-lg p-5 max-w-sm mx-auto my-6 text-white text-xs font-mono select-none">
+    {/* Top wall */}
+    <div className="text-center text-white/50 text-[10px] mb-1">🧱 Glass Wall 🧱</div>
+    
+    <div className="border-2 border-white/80 rounded relative" style={{ aspectRatio: "2/3" }}>
+      {/* Net - horizontal across the middle */}
+      <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-white/70 -translate-y-1/2" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-800 px-2 text-white/90 text-[11px] font-bold z-10">NET</div>
       
-      <div className="grid grid-cols-2">
-        {/* Left side */}
-        <div className="border-r border-white/30 p-2">
-          <div className="border border-white/40 rounded h-20 flex items-center justify-center mb-1">
-            <span className="text-white/60">Service</span>
-          </div>
-          <div className="border border-white/40 rounded h-20 flex items-center justify-center">
-            <span className="text-white/60">Service</span>
-          </div>
-          <div className="text-center mt-1 text-white/50">🧑‍🤝‍🧑 Team A</div>
+      {/* Center line - vertical */}
+      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/30 -translate-x-1/2" />
+
+      {/* Top half - Team A's side */}
+      <div className="absolute top-0 left-0 right-0 h-1/2">
+        {/* Service line */}
+        <div className="absolute bottom-[35%] left-0 right-0 h-px bg-white/40" />
+        {/* Service boxes labels */}
+        <div className="absolute bottom-[38%] left-1/4 -translate-x-1/2 text-white/30 text-[9px]">Service</div>
+        <div className="absolute bottom-[38%] right-1/4 translate-x-1/2 text-white/30 text-[9px]">Service</div>
+        {/* Player A1 - left side near net */}
+        <div className="absolute bottom-[10%] left-[25%] -translate-x-1/2 flex flex-col items-center">
+          <span className="text-2xl">🧑</span>
+          <span className="text-[9px] text-yellow-300">A1</span>
         </div>
-        {/* Right side */}
-        <div className="p-2">
-          <div className="border border-white/40 rounded h-20 flex items-center justify-center mb-1">
-            <span className="text-white/60">Service</span>
-          </div>
-          <div className="border border-white/40 rounded h-20 flex items-center justify-center">
-            <span className="text-white/60">Service</span>
-          </div>
-          <div className="text-center mt-1 text-white/50">🧑‍🤝‍🧑 Team B</div>
+        {/* Player A2 - right side back */}
+        <div className="absolute top-[15%] right-[25%] translate-x-1/2 flex flex-col items-center">
+          <span className="text-2xl">🧑</span>
+          <span className="text-[9px] text-yellow-300">A2</span>
         </div>
+        <div className="absolute top-1 left-1/2 -translate-x-1/2 text-yellow-300/70 text-[10px] font-bold">Team A</div>
+      </div>
+
+      {/* Bottom half - Team B's side */}
+      <div className="absolute bottom-0 left-0 right-0 h-1/2">
+        {/* Service line */}
+        <div className="absolute top-[35%] left-0 right-0 h-px bg-white/40" />
+        <div className="absolute top-[38%] left-1/4 -translate-x-1/2 text-white/30 text-[9px]">Service</div>
+        <div className="absolute top-[38%] right-1/4 translate-x-1/2 text-white/30 text-[9px]">Service</div>
+        {/* Player B1 - right side near net */}
+        <div className="absolute top-[10%] right-[25%] translate-x-1/2 flex flex-col items-center">
+          <span className="text-2xl">🧑</span>
+          <span className="text-[9px] text-sky-300">B1</span>
+        </div>
+        {/* Player B2 - left side back */}
+        <div className="absolute bottom-[15%] left-[25%] -translate-x-1/2 flex flex-col items-center">
+          <span className="text-2xl">🧑</span>
+          <span className="text-[9px] text-sky-300">B2</span>
+        </div>
+        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 text-sky-300/70 text-[10px] font-bold">Team B</div>
       </div>
     </div>
-    {/* Walls */}
-    <div className="flex justify-between mt-1 text-white/50 text-[10px]">
-      <span>🧱 Glass Wall</span>
-      <span>🧱 Glass Wall</span>
+
+    {/* Bottom wall */}
+    <div className="text-center text-white/50 text-[10px] mt-1">🧱 Glass Wall 🧱</div>
+    {/* Side walls */}
+    <div className="flex justify-between text-white/40 text-[10px] mt-0.5">
+      <span>⬅️ Fence + Glass</span>
+      <span>Fence + Glass ➡️</span>
     </div>
-    <p className="text-center text-white/40 mt-1 text-[10px]">⬆️ Enclosed court with glass walls & fences ⬆️</p>
   </div>
 );
 
