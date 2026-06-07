@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "Anyone can register" ON public.registrations;
