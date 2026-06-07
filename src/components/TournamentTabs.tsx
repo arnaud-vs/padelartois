@@ -1,9 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
 import PracticalInfo from "./PracticalInfo";
-import RegistrationForm from "./RegistrationForm";
 import RegisteredTeams from "./RegisteredTeams";
 import PadelRules from "./PadelRules";
-import { Info, Calendar, ClipboardList, Users, Trophy, AlertTriangle, BookOpen } from "lucide-react";
+import { Info, Calendar, ClipboardList, Users, Trophy, AlertTriangle, BookOpen, Lock } from "lucide-react";
+
 
 const TournamentTabs = () => {
   return (
@@ -42,8 +43,16 @@ const TournamentTabs = () => {
           </TabsList>
           
           <TabsContent value="registration">
-            <RegistrationForm />
+            <Card className="border-border/50">
+              <CardContent className="p-8 text-center">
+                <Lock className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                  Registrations closed. See you next time!
+                </h3>
+              </CardContent>
+            </Card>
           </TabsContent>
+
           
           <TabsContent value="teams">
             <RegisteredTeams />

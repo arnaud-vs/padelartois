@@ -83,7 +83,7 @@ const RegisteredTeams = () => {
       <div className="space-y-3">
         {registrations.map((reg, index) => {
           const skill = getSkillLabel(reg.skill_level);
-          const teamDisplay = reg.team_name || `Team ${reg.player1_name}`;
+          const teamDisplay = reg.team_name || `Team ${index + 1}`;
           
           return (
             <Card key={reg.id} className="border-border/50 hover:shadow-soft transition-shadow">
@@ -108,10 +108,6 @@ const RegisteredTeams = () => {
                         )}
                         {reg.is_hyped && <span title="Hyped!">🔥</span>}
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        {reg.player1_name}
-                        {reg.player2_name && ` & ${reg.player2_name}`}
-                      </p>
                     </div>
                   </div>
                   
@@ -124,6 +120,7 @@ const RegisteredTeams = () => {
             </Card>
           );
         })}
+
       </div>
     </div>
   );
